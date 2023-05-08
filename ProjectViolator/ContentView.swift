@@ -15,33 +15,77 @@ extension Date {
     }
 }
 
+let cardBackground: Color = Color(.white)
+let buttonBackground: LinearGradient = LinearGradient(gradient: Gradient(colors: [Color.indigo, Color.pink]), startPoint: /*@START_MENU_TOKEN@*/.topLeading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.bottomTrailing/*@END_MENU_TOKEN@*/)
+let textGrad = LinearGradient(gradient: Gradient(colors: [Color.pink, Color.indigo]), startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/)
+
+
+struct CardView: View {
+    var card: CategoryCard
+    var body: some View {
+        VStack(){
+            HStack() {
+                let amountString = String(format: "%.2f", card.amount)
+                Text(card.title)
+                    .font(.headline)
+                    .padding(.leading)
+                Spacer(minLength: 50)
+                HStack {
+                    Label("\(amountString)", systemImage: "dollarsign.circle")
+                }
+                Button(role: .none) {
+                    
+                }
+            label: {
+                Image(systemName: "plus")
+                    .font(Font.title.weight(.heavy))
+                    .frame(width: 80, height: 80)
+            }
+            .foregroundStyle(buttonBackground)
+            .cornerRadius(8)
+            .position(x:30,y:30)
+            .frame(width: 60, height: 60)
+            }
+            .frame(width: 300, height: 70)
+            .background(RoundedRectangle(cornerRadius: 8, style:
+                    .continuous).fill(Color.white).shadow(radius: 8))
+            .backgroundStyle(cardBackground)
+            
+            
+        }
+    }
+}
 
 let date = Date()
 let monthString = date.month
-
-let textGrad = LinearGradient(gradient: /*@START_MENU_TOKEN@*/Gradient(colors: [Color.red, Color.blue])/*@END_MENU_TOKEN@*/, startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/)
-
 
 struct ContentView: View {
     
     var body: some View {
         
-        cardContainer {
-            let accentColor = Color(red: 1, green: 0.5, blue: 0.5)
+        VStack() {    //MonthText Container
             Text(monthString)
                 .font(.title)
-                .position(x: 185, y:20)
                 .foregroundStyle(textGrad)
-            
-            VStack{
-                
+                .frame(height: 80)
+            ScrollView(){
+                CardView(card: CategoryCard.sampleData[0])
+                CardView(card: CategoryCard.sampleData[1])
+                CardView(card: CategoryCard.sampleData[2])
+                CardView(card: CategoryCard.sampleData[2])
+                CardView(card: CategoryCard.sampleData[2])
+                CardView(card: CategoryCard.sampleData[2])
+                CardView(card: CategoryCard.sampleData[2])
+                CardView(card: CategoryCard.sampleData[2])
+                CardView(card: CategoryCard.sampleData[2])
+                CardView(card: CategoryCard.sampleData[2])
+                }
+            .frame(width:350)
             }
-            
+        .position(x: 195, y: 350)
         }
-        
-        .padding()
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
