@@ -16,6 +16,7 @@
 		5791A1E32A01B5AF0019CBE7 /* ProjectViolatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5791A1E22A01B5AF0019CBE7 /* ProjectViolatorUITestsLaunchTests.swift */; };
 		579E28582A043AB00038B5D5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E28572A043AB00038B5D5 /* Theme.swift */; };
 		579E285A2A043B390038B5D5 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E28592A043B390038B5D5 /* CategoryCard.swift */; };
+		579E285F2A0C50160038B5D5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 579E285D2A0C50160038B5D5 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		5791A1E22A01B5AF0019CBE7 /* ProjectViolatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViolatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		579E28572A043AB00038B5D5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		579E28592A043B390038B5D5 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
+		579E285E2A0C50160038B5D5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				5791A1C72A01B5AE0019CBE7 /* ContentView.swift */,
 				5791A1C92A01B5AF0019CBE7 /* Assets.xcassets */,
 				5791A1CB2A01B5AF0019CBE7 /* Preview Content */,
+				579E285D2A0C50160038B5D5 /* Model.xcdatamodeld */,
 			);
 			path = ProjectViolator;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			files = (
 				579E28582A043AB00038B5D5 /* Theme.swift in Sources */,
 				5791A1C82A01B5AE0019CBE7 /* ContentView.swift in Sources */,
+				579E285F2A0C50160038B5D5 /* Model.xcdatamodeld in Sources */,
 				5791A1C62A01B5AE0019CBE7 /* ProjectViolatorApp.swift in Sources */,
 				579E285A2A043B390038B5D5 /* CategoryCard.swift in Sources */,
 			);
@@ -593,6 +597,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		579E285D2A0C50160038B5D5 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				579E285E2A0C50160038B5D5 /* Model.xcdatamodel */,
+			);
+			currentVersion = 579E285E2A0C50160038B5D5 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5791A1BA2A01B5AE0019CBE7 /* Project object */;
 }
